@@ -19,7 +19,7 @@ import de.retest.recheck.junit.jupiter.RecheckExtension;
  * Simple recheck-web showcase for a Chrome-based integration test. See other *IT classes for more examples.
  */
 @ExtendWith( RecheckExtension.class )
-public class SimpleRecheckShowcaseIT {
+public class SimpleRecheckShowcaseTest {
 
 	private WebDriver driver;
 	private Recheck re;
