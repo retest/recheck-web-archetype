@@ -11,19 +11,14 @@ addons:
   firefox: latest
   apt:
     packages:
-      - chromium-chromedriver
-  sonarcloud:
-    organization: retest
-    token:
-      secure: "${SONAR_CLOUD_TOKEN}"
+    - chromium-chromedriver
 
 notifications:
   email: false
 
 cache:
   directories:
-    - "${HOME}/.sonar/cache/"
-    - "${HOME}/.m2/"
+  - "${HOME}/.m2/"
 
 install: true
 
@@ -34,12 +29,12 @@ script: ci/script.sh
 before_deploy: ci/before_deploy.sh
 
 deploy:
-  - provider: script
-    script: ci/deploy.sh
-    on:
-      tags: true
-  - provider: releases
-    api_key: "${GH_TOKEN}"
-    draft: true
-    on:
-      tags: true
+- provider: script
+  script: ci/deploy.sh
+  on:
+    tags: true
+- provider: releases
+  api_key: "${GH_TOKEN}"
+  draft: true
+  on:
+    tags: true
