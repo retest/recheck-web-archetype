@@ -1,8 +1,9 @@
 # <a href="https://retest.dev"><img src="https://assets.retest.org/retest/ci/logos/recheck-screen.svg" width="300"/></a>
 
-[![Build Status](https://travis-ci.com/retest/recheck-web-archetype.svg?branch=master)](https://travis-ci.com/retest/recheck-web-archetype)
+[![Build Status](https://github.com/retest/recheck-web-archetype/workflows/build/badge.svg)](https://github.com/retest/recheck-web-archetype/actions?query=workflow%3Abuild)
 [![Latest recheck-web-archetype on Maven Central](https://maven-badges.herokuapp.com/maven-central/de.retest/recheck-web-archetype/badge.svg?style=flat)](https://mvnrepository.com/artifact/de.retest/recheck-web-archetype)
-[![license](https://img.shields.io/badge/license-AGPL-brightgreen.svg)](https://github.com/retest/recheck-web-archetype/blob/master/LICENSE)
+[![Latest recheck-web-archetype releases on JitPack](https://jitpack.io/v/de.retest/recheck-web-archetype.svg)]( https://jitpack.io/#de.retest/recheck-web-archetype)
+[![license](https://img.shields.io/badge/license-AGPL-brightgreen.svg)](https://github.com/retest/recheck-web-archetype/blob/main/LICENSE)
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-ff69b4.svg)](https://github.com/retest/recheck-web-archetype/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22)
 [![code with hearth by retest](https://img.shields.io/badge/%3C%2F%3E%20with%20%E2%99%A5%20by-retest-C1D82F.svg)](https://retest.de/)
 
