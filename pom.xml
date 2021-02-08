@@ -4,7 +4,7 @@
 
 	<groupId>de.retest</groupId>
 	<artifactId>recheck-web-archetype</artifactId>
-	<version>1.11.0-SNAPSHOT</version>
+	<version>1.12.0-SNAPSHOT</version>
 	<packaging>maven-archetype</packaging>
 
 	<name>recheck-web-archetype</name>
