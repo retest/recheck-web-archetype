@@ -95,7 +95,7 @@
 					<useSnapshotInHotfix>true</useSnapshotInHotfix>
 					<useSnapshotInRelease>true</useSnapshotInRelease>
 					<versionDigitToIncrement>1</versionDigitToIncrement>
-					<commitMessagePrefix>ci: </commitMessagePrefix>
+					<commitMessagePrefix>ci:&#032;</commitMessagePrefix>
 					<pushRemote>true</pushRemote>
 				</configuration>
 			</plugin>
