@@ -1,10 +1,10 @@
-name: Release feature start
+name: Release hotfix start
 
 on:
   workflow_dispatch:
     inputs:
       approval:
-        description: 'Do you really want to start a FEATURE release from DEVELOP branch?'
+        description: 'Do you really want to start a HOTFIX release from MAIN branch?'
         required: true
         default: 'NO'
 
@@ -40,6 +40,6 @@ jobs:
 
 
       - name: Start release branch
-        run: mvn ${MVN_ARGS} gitflow:release-start
+        run: mvn ${MVN_ARGS} gitflow:hotfix-start
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -1,10 +1,10 @@
-name: Release feature start
+name: Release feature finish
 
 on:
   workflow_dispatch:
     inputs:
       approval:
-        description: 'Do you really want to start a FEATURE release from DEVELOP branch?'
+        description: 'Do you really want to finish the current FEATURE release?'
         required: true
         default: 'NO'
 
@@ -21,6 +21,9 @@ jobs:
         run: "[[ $(echo ${{ github.event.inputs.approval }} | tr 'a-z' 'A-Z') == 'YES' ]]"
 
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.TRIGGER_ACTIONS_GITHUB_TOKEN }}
 
       - uses: actions/setup-java@v1
         with:
@@ -38,8 +41,7 @@ jobs:
           git config user.email "ops+githubactions@retest.de"
           git config user.name "retest release github action"
 
-
-      - name: Start release branch
-        run: mvn ${MVN_ARGS} gitflow:release-start
+      - name: Tag and finish release branch
+        run: mvn ${MVN_ARGS} gitflow:release-finish
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
