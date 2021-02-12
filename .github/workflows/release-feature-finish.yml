@@ -43,5 +43,3 @@ jobs:
 
       - name: Tag and finish release branch
         run: mvn ${MVN_ARGS} gitflow:release-finish
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
