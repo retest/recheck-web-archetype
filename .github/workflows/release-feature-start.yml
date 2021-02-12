@@ -41,5 +41,3 @@ jobs:
 
       - name: Start release branch
         run: mvn ${MVN_ARGS} gitflow:release-start
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
