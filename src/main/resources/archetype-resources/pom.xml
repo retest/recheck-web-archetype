@@ -13,7 +13,7 @@
 		<project.resources.sourceEncoding>UTF-8</project.resources.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-		<recheck.version>1.11.2</recheck.version>
+		<recheck.version>1.12.0</recheck.version>
 		<recheck.web.version>1.11.1</recheck.web.version>
 		<recheck.extension.version>1.11.0</recheck.extension.version>
 	</properties>
