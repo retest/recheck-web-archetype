@@ -64,5 +64,5 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: tests.report
-          path: target/test-classes/retest/recheck/tests.report
+          path: target/test-classes/projects/it-basic/project/recheck-web-example/target/test-classes/retest/recheck/tests.report
           retention-days: 10
