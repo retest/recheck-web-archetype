@@ -5,6 +5,8 @@ on: [push, pull_request]
 
 env:
   MVN_ARGS: --batch-mode --errors --fail-fast --no-transfer-progress
+  HAS_SONAR_TOKEN: ${{ secrets.SONAR_TOKEN != '' }}
+
 
 jobs:
   default:
@@ -41,7 +43,9 @@ jobs:
         with:
           java-version: 15
 
-      - name: Test
+      - name: Test with SonarCloud
+        id: test-with-sonar
+        if: ${{ env.HAS_SONAR_TOKEN == 'true' }}
         run: >
           mvn ${MVN_ARGS} verify sonar:sonar -Pcoverage
           -Dsonar.host.url=https://sonarcloud.io
@@ -50,11 +54,15 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
+      - name: Test without SonarCloud
+        id: test-without-sonar
+        if: ${{ steps.test-with-sonar.conclusion == 'skipped' }}
+        run: mvn ${MVN_ARGS} verify
 
       - name: Archive recheck tests.report
         if: always()
         uses: actions/upload-artifact@v2
         with:
           name: tests.report
-          path: target/test-classes/retest/recheck/tests.report
+          path: target/test-classes/projects/it-basic/project/recheck-web-example/target/test-classes/retest/recheck/tests.report
           retention-days: 10

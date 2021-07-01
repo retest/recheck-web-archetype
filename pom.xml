@@ -4,7 +4,7 @@
 
 	<groupId>de.retest</groupId>
 	<artifactId>recheck-web-archetype</artifactId>
-	<version>1.11.0</version>
+	<version>1.12.0</version>
 	<packaging>maven-archetype</packaging>
 
 	<name>recheck-web-archetype</name>
@@ -82,7 +82,7 @@
 			<plugin>
 				<groupId>com.amashchenko.maven.plugin</groupId>
 				<artifactId>gitflow-maven-plugin</artifactId>
-				<version>1.15.1</version>
+				<version>1.16.0</version>
 				<configuration>
 					<gitFlowConfig>
 						<productionBranch>main</productionBranch>
@@ -95,7 +95,7 @@
 					<useSnapshotInHotfix>true</useSnapshotInHotfix>
 					<useSnapshotInRelease>true</useSnapshotInRelease>
 					<versionDigitToIncrement>1</versionDigitToIncrement>
-					<commitMessagePrefix>ci:&#032;</commitMessagePrefix>
+					<commitMessagePrefix xml:space="preserve">ci: </commitMessagePrefix>
 					<pushRemote>true</pushRemote>
 				</configuration>
 			</plugin>
@@ -117,7 +117,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
-				<version>3.2.0</version>
+				<version>3.3.0</version>
 				<executions>
 					<execution>
 						<id>bundle-javadoc</id>
@@ -171,7 +171,7 @@
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-gpg-plugin</artifactId>
-						<version>1.6</version>
+						<version>3.0.1</version>
 						<configuration>
 							<skip>${gpg.skip}</skip>
 							<passphrase>${env.GPG_PASSPHRASE}</passphrase>
@@ -201,7 +201,7 @@
 					<plugin>
 						<groupId>org.jacoco</groupId>
 						<artifactId>jacoco-maven-plugin</artifactId>
-						<version>0.8.6</version>
+						<version>0.8.7</version>
 						<executions>
 							<execution>
 								<id>prepare-agent</id>
