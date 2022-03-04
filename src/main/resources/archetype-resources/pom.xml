@@ -14,7 +14,7 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
 		<recheck.version>1.12.0</recheck.version>
-		<recheck.web.version>1.13.0-SNAPSHOT</recheck.web.version>
+		<recheck.web.version>1a574ad174</recheck.web.version>
 		<recheck.extension.version>1.12.0</recheck.extension.version>
 	</properties>
 
@@ -54,6 +54,17 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+
+	<repositories>
+		<repository>
+			<id>central</id>
+			<url>https://repo.maven.apache.org/maven2/</url>
+		</repository>
+		<repository>
+			<id>jitpack.io</id>
+			<url>https://jitpack.io/</url>
+		</repository>
+	</repositories>
 
 	<build>
 		<plugins>
