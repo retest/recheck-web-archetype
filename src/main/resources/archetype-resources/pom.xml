@@ -13,8 +13,8 @@
 		<project.resources.sourceEncoding>UTF-8</project.resources.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-		<recheck.version>1.12.0</recheck.version>
-		<recheck.web.version>1.12.0</recheck.web.version>
+		<recheck.version>1.13.0</recheck.version>
+		<recheck.web.version>85378b84ac</recheck.web.version>
 		<recheck.extension.version>1.12.0</recheck.extension.version>
 	</properties>
 
@@ -22,7 +22,7 @@
 		<dependency>
 			<groupId>ch.qos.logback</groupId>
 			<artifactId>logback-classic</artifactId>
-			<version>1.2.3</version>
+			<version>1.2.11</version>
 		</dependency>
 		<dependency>
 			<groupId>de.retest</groupId>
@@ -44,16 +44,27 @@
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
 			<artifactId>junit-jupiter</artifactId>
-			<version>5.7.2</version>
+			<version>5.8.2</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
-			<version>3.141.59</version>
+			<version>4.1.2</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+
+	<repositories>
+		<repository>
+			<id>central</id>
+			<url>https://repo.maven.apache.org/maven2/</url>
+		</repository>
+		<repository>
+			<id>jitpack.io</id>
+			<url>https://jitpack.io/</url>
+		</repository>
+	</repositories>
 
 	<build>
 		<plugins>
