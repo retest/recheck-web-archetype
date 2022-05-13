@@ -12,5 +12,8 @@
 		<fileSet filtered="false" packaged="false">
 			<directory>src/test/resources</directory>
 		</fileSet>
+		<fileSet filtered="false" packaged="false">
+			<directory>.retest</directory>
+		</fileSet>
 	</fileSets>
 </archetype-descriptor>
